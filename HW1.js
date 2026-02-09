@@ -156,7 +156,7 @@ console.log(result);
 
 /*Task 8*/
 
-/*Є масив статусів тестів. const testResults = ["passed", "passed", "failed"]; Напиши функцію з звичайним loop і if’ом, де ти ітеруєш по цьому списку і перевіряєш чи значення passed. Якщо ні - виконання функції автоматично завершується.
+/*Є масив статусів тестів. const testResults = ["passed", "passed", "failed"]; Напиши функцію з звичайним loop і пif’ом, де ти ітеруєш по цьому списку і перевіряєш чи значення passed. Якщо ні - виконання функції автоматично завершується.
 Якщо всі значення passed - поверни “success”*/
 
 function checkStatus(statuses) {
@@ -171,3 +171,43 @@ for (let i=0; i<statuses.length; i++) {
     return 'success'
 
 }
+
+/***Task9***/
+/*Напиши функцію яка приймає список з чисел. Сплюсуй по 2 числа з цього списку і утвори новий список. 
+Поверни з функції новий список. Наприклад - [1, 2, 3, 4] -> стане [3, 7]*/
+
+
+function sumPairs(arr) {
+  const result = [];
+
+  for (let i = 0; i < arr.length; i += 2) {
+    result.push(arr[i] + arr[i + 1]);
+  }
+
+  return result;
+}
+
+
+/*Task10*/
+  /*Напиши функцію яка приймає список з строк. До кожної строки в цьому списку додай довжину цього списку.Наприклад - ["first", "second", "third"] -> ["first3", "second3", "third3"]*/
+
+const arr123 = ["first", "second", "third"]; 
+
+const addValue = arr123.map(value => value + '3')
+
+console.log(addValue) 
+
+
+ /*Task11*/ 
+ /*Напиши функцію яка приймає список з чисел. 
+ Поверни новий список = значення з старого списку + значення з старого списку в реверсивному порядку.Наприклад - [1, 2, 3] -> [1, 2, 3, 3, 2, 1]*/
+
+const arr1 = [1, 2, 3];
+
+function array2(arr1) {
+  const reversed = [...arr1].reverse();
+  return arr.concat(reversed);
+}
+
+console.log(mirrorArray(arr1))
+
