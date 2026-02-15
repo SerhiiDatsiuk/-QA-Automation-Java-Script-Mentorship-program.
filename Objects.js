@@ -45,7 +45,7 @@ newObj = {
 
 const vegs = ['tomato', 'cucumber', 'pepper', 'tomato', 'carrot', 'carrot'];
 
-function newFunction(arr) {
+function getObj(arr) {
     let newObj = {};
 
  for (let i = 0; i < arr.length; i++) {
@@ -58,14 +58,24 @@ function newFunction(arr) {
     return newObj
 }
 
-console.log(newFunction(vegs))
+console.log(getObj(vegs))
 
 
 
 /*Task3*/
 /*Створити функцію яка приймає обʼєкт (де поле це строка, а значення це число). Повернути список значень цього обʼєкту.*/
 
+function getValues (obj) {
+    return Object.values(obj);
+}
 
+const obj3 = {
+    field1: 10,
+    field2: 255,
+    field3: 10.25
+};
+
+console.log(getValues(obj3))
 
 
 
