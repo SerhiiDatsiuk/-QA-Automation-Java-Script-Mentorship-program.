@@ -25,11 +25,9 @@ const colleaguesInfo = [
     firstName: 'Oleg', 
     age: 50, 
     role: 'Java Engineer', 
-    level: 'Lead',
+    level: 'Tech Lead',
 }
 ];
-
-
 
 /*Task2*/
 /*Створити функцію, яка приймає список строк ['tomato', 'cucumber', 'pepper', 'tomato', 'carrot', 'carrot']. 
@@ -60,8 +58,6 @@ function getObj(arr) {
 
 console.log(getObj(vegs))
 
-
-
 /*Task3*/
 /*Створити функцію яка приймає обʼєкт (де поле це строка, а значення це число). Повернути список значень цього обʼєкту.*/
 
@@ -77,9 +73,18 @@ const obj3 = {
 
 console.log(getValues(obj3))
 
-
-
-
-
 /*Task4*/
 /*Створити функцію яка приймає обʼєкт(де поле це строка, а значення це число). Повернути список полів цього обʼєкту.*/
+
+function getValues (obj) {
+    return Object.keys(obj);
+}
+
+const objCar = {
+    make: 'Skoda',
+    model: 'fabia',
+    year: '2007',
+    type: 'combi'
+};
+
+console.log(getValues(objCar))
