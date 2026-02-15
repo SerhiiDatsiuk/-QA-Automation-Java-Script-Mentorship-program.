@@ -85,7 +85,7 @@ console.log(responseTimes);
 /*Це моє перше рішення після вивчення sort() методу. Але мені чат підказав що треба використати toSorted(),
 оскільки sort() змінює початковий масив */
 
-const responseTimes = [350, 120, 500, 200];
+const responseTime = [350, 120, 500, 200];
 
 const maxResponseTime = responseTimes.sort((a, b) => a - b); // responseTimes.toSorted((a, b) => a - b);
 

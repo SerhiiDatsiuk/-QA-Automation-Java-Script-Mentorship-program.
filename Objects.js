@@ -31,15 +31,34 @@ const colleaguesInfo = [
 
 
 
-
 /*Task2*/
-/*Створити функцію, яка примає список строк ['tomato', 'cucumber', 'pepper', 'tomato', 'carrot', 'carrot']. 
-Повернути обʼєкт де поля це продукти а значення це кількість цих продуктів. тобто tomato:2, carrot: 2 і тд
+/*Створити функцію, яка приймає список строк ['tomato', 'cucumber', 'pepper', 'tomato', 'carrot', 'carrot']. 
+Повернути обʼєкт де поля це продукти а значення це кількість цих продуктів. тобто tomato:2, carrot: 2 і тд */
 
+/*Такий має бути результат
+newObj = {
+   tomato: 2,
+   cucumber: 1,
+   pepper: 1,
+   carrot: 2 
+}*/
 
+const vegs = ['tomato', 'cucumber', 'pepper', 'tomato', 'carrot', 'carrot'];
 
+function newFunction(arr) {
+    let newObj = {};
 
+ for (let i = 0; i < arr.length; i++) {
+  if (newObj[arr[i]] === undefined) {
+    newObj[arr[i]] = 1;
+  } else {
+    newObj[arr[i]] = newObj[arr[i]] + 1;
+  }
+}
+    return newObj
+}
 
+console.log(newFunction(vegs))
 
 
 
