@@ -4,6 +4,7 @@
 написати в них різні методи, які притаманні цим обʼєктам. Зробити інстанси кожного класу, і викликати методи на них.*/
 
 
+//---------Table class---------
 class Table {
     constructor (type, color, size, material) {
     this.type = type;
@@ -16,10 +17,9 @@ displayTableInfo() {
 }
 
 }
-const table1 = new Table ('kitchen', 'white wood', 'height*wide*long -80cm*100cm*180cm', 'wood');
-table1.displayTableInfo();
 
 
+//---------Door class---------
 class Door {
   constructor() {
     this.isOpen = false;
@@ -40,11 +40,9 @@ class Door {
   }
 }
 
-const door = new Door ();
-console.log(door.open())
 
 
-
+//---------Fridge class---------
 class Fridge {
   constructor() {
     this.isOpen = false;
@@ -70,10 +68,8 @@ class Fridge {
   }
 }
 
-const fridge = new Fridge();
 
-console.log(fridge.addFood("Milk"));
-
+//---------Dishwasher class---------
 
 class Dishwasher {
   constructor() {
@@ -103,3 +99,31 @@ class Dishwasher {
     return "Dishwasher stopped";
   }
 }
+
+
+// --------- Kitchen (composition) ----------
+class Kitchen {
+  constructor() {
+    this.table = new Table('kitchen', 'white wood', 'height*wide*long -80cm*100cm*180cm', 'wood');
+    this.door = new Door();
+    this.fridge = new Fridge();
+    this.dishwasher = new Dishwasher()
+  }
+}
+
+
+const kitchen = new Kitchen ();
+
+kitchen.table.displayTableInfo();
+
+console.log(kitchen.door.open());
+
+console.log(kitchen.fridge.open());
+
+console.log(kitchen.fridge.addFood("Milk"));
+
+console.log(kitchen.fridge.products);
+
+console.log(kitchen.dishwasher.start());
+
+console.log(kitchen.dishwasher.stop());
