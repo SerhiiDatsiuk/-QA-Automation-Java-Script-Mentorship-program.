@@ -1,10 +1,8 @@
-
-import Car from './Car.js';  
+import Car from "./Car.js";
 
 export default class DieselCar extends Car {
- constructor(name) {
+  constructor(name) {
     super(name, "diesel");
-
   }
 
   refuel() {
@@ -15,4 +13,3 @@ export default class DieselCar extends Car {
     console.log(`${this.name} is a diesel car`);
   }
 }
-

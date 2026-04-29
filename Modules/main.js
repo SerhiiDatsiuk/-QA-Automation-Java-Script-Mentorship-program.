@@ -1,7 +1,7 @@
-import Car from "./cars/Car.js";
-import DieselCar from "./cars/DieselCar.js";
-import PetrolCar from "./cars/PetrolCar.js";
-import HybridCar from "./cars/HybridCar.js";
+import Car from "../src/cars/Car.js";
+import DieselCar from "../src/cars/DieselCar.js";
+import PetrolCar from "../src/cars/PetrolCar.js";
+import HybridCar from "../src/cars/HybridCar.js";
 
 const regularCar = new Car("Generic Car", "Combi");
 const dieselCar = new DieselCar("BMW X5");

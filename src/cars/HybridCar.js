@@ -1,5 +1,4 @@
-
-import Car from './Car.js'; 
+import Car from "./Car.js";
 
 export default class HybridCar extends Car {
   constructor(name, batteryCapacity) {
@@ -8,11 +7,14 @@ export default class HybridCar extends Car {
   }
 
   charge() {
-    console.log(`${this.name} is charging battery (${this.batteryCapacity} kWh)`);
+    console.log(
+      `${this.name} is charging battery (${this.batteryCapacity} kWh)`,
+    );
   }
 
-  
   buy() {
-    console.log(`${this.name} is a hybrid car (fuel + electric) and it is worth to buy`);
+    console.log(
+      `${this.name} is a hybrid car (fuel + electric) and it is worth to buy`,
+    );
   }
-}  
+}
